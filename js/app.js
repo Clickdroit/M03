@@ -15,3 +15,6 @@ function AfficherMenu(){
 function FermerMenu(){
     document.getElementById('navigator').style.display='none';
 }
+
+
+//d85e295dccdc11e63077777de976518f API KEY
