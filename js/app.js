@@ -18,13 +18,42 @@ function FermerMenu(){
 function AfficherAccueil(){
     window.location.href = "index.html";
 }
+// Fonction pour échapper les caractères HTML (protection XSS)
+function escapeHtml(text) {
+    var div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
 function AfficherLumiere(){
-    window.location.href = "lumiere.html";
     document.getElementById('navigator').style.display='none';
+    
+    // Créer une variable « section » contenant les informations de l'élément ayant comme identifiant « section »
     var section = document.getElementById('section');
-    section.innerHTML = "";
+    
+    // Initialisation de la variable lumière à une chaine de caractère vide
     var lumiere = '';
-    lumiere = lumiere + '<img src="./icones/lightbulb.png" alt="lumiere"><button id="on">ON</button><button id="off">OFF</button>';
+    
+    // Données simulées pour la démonstration (en production, utiliser AfficherLumiereAPI())
+    var lights = [
+        { name: "Lumière 1", type: "Extended color light" },
+        { name: "Lumière 2", type: "Extended color light" },
+        { name: "Prise 1", type: "On/Off plug-in unit" },
+        { name: "Lumière 3", type: "Color light" }
+    ];
+    
+    // Boucle sur les différents éléments
+    for (var i = 0; i < lights.length; i++) {
+        var element = lights[i];
+        
+        // Condition pour ne visualiser que les lumières (type contient "light")
+        if (element.type && element.type.toLowerCase().includes('light')) {
+            // Compléter la variable « lumiere » avec la structure HTML
+            lumiere = lumiere + '<div class="lumiere-item"><img src="./images/lightbulb.png" alt="lumiere"><span>' + escapeHtml(element.name) + '</span><button id="on_' + i + '">ON</button><button id="off_' + i + '">OFF</button></div>';
+        }
+    }
+    
+    // Afficher le contenu de la variable « lumiere » dans l'identifiant section
     section.innerHTML = lumiere;
 }
 function AfficherPrise(){
