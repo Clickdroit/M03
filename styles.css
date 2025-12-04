@@ -1,121 +1,123 @@
-body 
-{	background-color:#E0E0E0;
-    margin:0px;
-	width:100vw;
-    padding: 0px;
+body {
+  background-color: #e0e0e0;
+  margin: 0px;
+  width: 100vw;
+  padding: 0px;
 }
-header{
-    width: 100%;
-    height: 10vh;
-    background-color: #e0e0e0;
+header {
+  width: 100%;
+  height: 10vh;
+  background-color: #e0e0e0;
 }
-#logoHamburger{
-	height:50%;
-	float:left;
-	margin-left:10px;
-	margin-top:10px;
+#logoHamburger {
+  height: 50%;
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
 }
-#logo{
-	height:50%;
-	float:right;
-	margin-right:10px;
-	margin-top:10px;
+#logo {
+  height: 50%;
+  float: right;
+  margin-right: 10px;
+  margin-top: 10px;
 }
-#imageHamburger{
-    float: left;
-    margin: 20px;
+#imageHamburger {
+  float: left;
+  margin: 20px;
 }
-#imageDomoticz{
-    float: right;
-    margin: 20px;
+#imageDomoticz {
+  float: right;
+  margin: 20px;
 }
-nav{
-    height: 100vh;
-    display: none;
-    width: 50%;
-    position: absolute;
-    z-index: 10;
-    background-color: #efbe48e5;
+nav {
+  height: 100vh;
+  display: none;
+  width: 50%;
+  position: absolute;
+  z-index: 10;
+  background-color: #efbe48e5;
 }
-.div_menu,.div_meteo{
-    height: 90px;
-    min-width: 300px;
-    max-width: 400px;
+.div_menu,
+.div_meteo {
+  height: 90px;
+  min-width: 300px;
+  max-width: 400px;
 }
-.div_menu img{
-    float: left;
-    margin: 10px;
+.div_menu img {
+  float: left;
+  margin: 10px;
 }
-.div_menu:hover{
-    background-color: grey;
-    cursor: pointer;
+.div_menu:hover {
+  background-color: grey;
+  cursor: pointer;
 }
-.div_meteo{
-    text-align: center;
-    padding-top: 10px;
+.div_meteo {
+  text-align: center;
+  padding-top: 10px;
 }
-.div_meteo:hover{
-    font-style: italic;
-    text-decoration: underline;
-    cursor: pointer;
+.div_meteo:hover {
+  font-style: italic;
+  text-decoration: underline;
+  cursor: pointer;
 }
-nav > p{
-    text-align: center;
-    padding-top: 35px;
+nav > p {
+  text-align: center;
+  padding-top: 35px;
 }
-section{
-	height:75vh;
-	width:100%;
-	background-color: #4b6983;
+section {
+  height: 75vh;
+  width: 100%;
+  background-color: #4b6983;
 }
-footer{
-    height: 15vh;
-    width: 100%;
-    position: fixed;
-    background-color: #e0e0e0;
-    bottom: 0;
+footer {
+  height: 15vh;
+  width: 100%;
+  position: fixed;
+  background-color: #e0e0e0;
+  bottom: 0;
 }
-#materiel,#application{
-	text-align: justify;
+#materiel,
+#application {
+  text-align: justify;
 }
-#nav-txt{
-    text-align: center;
+#nav-txt {
+  text-align: center;
 }
-header > h1{
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    line-height: 10vh;
+header > h1 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 10vh;
 }
-footer>div{
-    text-align: center;
-    margin-bottom: 15px;
+footer > div {
+  text-align: center;
+  margin-bottom: 15px;
 }
-.div_meteo{
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    margin-left: 0; 
-    padding: 0 10px;
-    text-align: left;
+.div_meteo {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin-left: 0;
+  padding: 0 10px;
+  text-align: left;
 }
-.div_meteo img{
-    justify-self: end;
-    width: 48px;
-    height: 48px;
+.div_meteo img {
+  justify-self: end;
+  width: 48px;
+  height: 48px;
 }
 
-.icone_meteo{
-    margin: 10px;
-    align-items: right;
+.icone_meteo {
+  margin: 10px;
+  align-items: right;
 }
-.div_meteo p{
-    margin: 0;
-    padding: 0;
+.div_meteo p {
+  margin: 0;
+  padding: 0;
 }
-.div_menu{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 0 10px;
+.div_menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px;
 }
