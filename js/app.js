@@ -21,11 +21,6 @@ function AfficherAccueil(){
 function AfficherLumiere(){
     window.location.href = "lumiere.html";
     document.getElementById('navigator').style.display='none';
-    var section = document.getElementById('section');
-    section.innerHTML = "";
-    var lumiere = '';
-    lumiere = lumiere + '<img src="./icones/lightbulb.png" alt="lumiere"><button id="on">ON</button><button id="off">OFF</button>';
-    section.innerHTML = lumiere;
 }
 function AfficherPrise(){
     window.location.href = "prise.html";

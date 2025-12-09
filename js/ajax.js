@@ -31,11 +31,33 @@ function AfficherLumiere() {
   xhttpAL.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       var reponseAL = this.responseText;
+      var lumieres = JSON.parse(reponseAL);
 
       console.log(reponseAL);
+      var section = document.getElementById("section");
+      section.innerHTML = "";
+      var lumiere = '';
+      for (var num in lumieres) {
+        var item = lumieres[num];
+        let type = item.type;
+        let etat = item.state.on;
+        let uniqueid = item.uniqueid;
+        console.log("ID: " + num + " Type: " + type + " Etat: " + etat + " UniqueID: " + uniqueid);
+        if (item.type && item.type.toLowerCase().includes("light")) {
+          lumiere = lumiere + '<div class="lumiere-card">';
+          lumiere = lumiere + "<h3>" + item.name + "</h3>";
+          lumiere =lumiere + '<img src="images/lightbulb.png" alt="lumiere">';
+          lumiere =lumiere + '<button class="btn-on" id="'+uniqueid+'">ON</button>';           
+          lumiere =lumiere +'<button class="btn-off" id="'+uniqueid+'">OFF</button>';
+          lumiere = lumiere + "</div>";
+        }
+      }
+      section.innerHTML = lumiere;
     }
   };
   xhttpAL.open("GET", "http://172.20.21.230/api/F163AB8D21/lights/");
   xhttpAL.send();
 }
-AfficherLumiere();
+if (window.location.pathname.includes("lumiere.html")) {
+  AfficherLumiere();
+}
