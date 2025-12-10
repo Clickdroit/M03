@@ -4,9 +4,7 @@ var fermer = document.getElementById('closeNav');
 fermer.addEventListener('click', FermerMenu)
 logoHamburger.addEventListener('click', AfficherMenu);
 document.getElementById('homeNAV').addEventListener('click', AfficherAccueil);
-document.getElementById("lumiereNAV").addEventListener('click', AfficherLumiere);
-document.getElementById("priseNAV").addEventListener('click', AfficherPrise);
-document.getElementById("capteurNAV").addEventListener('click', AfficherCapteur);
+
 
 function AfficherMenu(){
     document.getElementById('navigator').style.display='block';
@@ -16,17 +14,9 @@ function FermerMenu(){
     document.getElementById('navigator').style.display='none';
 }
 function AfficherAccueil(){
-    window.location.href = "index.html";
 }
 function AfficherLumiere(){
-    window.location.href = "lumiere.html";
     document.getElementById('navigator').style.display='none';
-}
-function AfficherPrise(){
-    window.location.href = "prise.html";
-}
-function AfficherCapteur(){
-    window.location.href = "capteur.html";
 }
 
 

@@ -26,7 +26,26 @@ function ajax() {
 }
 ajax();
 
+var lumiereNav = document.getElementById("lumiereNAV");
+lumiereNav.addEventListener("click", AfficherLumiere);
+
+function ajaxLumiere() {
+  FermerMenu();
+  document.getElementById("section").innerHTML = "";
+  var lumiere = '';
+  lumiere = lumiere + '<div class="lumiere-card">';
+  lumiere = lumiere + "<h3>" + item.name + "</h3>";
+  lumiere =lumiere + '<img src="images/lightbulb.png" alt="lumiere">';
+  lumiere =lumiere + '<button class="btn-on" id="'+uniqueid+'">ON</button>';           
+  lumiere =lumiere +'<button class="btn-off" id="'+uniqueid+'">OFF</button>';
+  lumiere = lumiere + "</div>";
+  document.getElementById("section").innerHTML = lumiere;
+}
+
+
+
 function AfficherLumiere() {
+  FermerMenu();
   const xhttpAL = new XMLHttpRequest();
   xhttpAL.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
@@ -40,7 +59,7 @@ function AfficherLumiere() {
       for (var num in lumieres) {
         var item = lumieres[num];
         let type = item.type;
-        let etat = item.state.on;
+        let etat = item.state.on; 
         let uniqueid = item.uniqueid;
         console.log("ID: " + num + " Type: " + type + " Etat: " + etat + " UniqueID: " + uniqueid);
         if (item.type && item.type.toLowerCase().includes("light")) {
